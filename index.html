@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBDW</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <audio id="ambiente" loop autoplay volume="0.5">
+        <source src="./music/para_o_site.mp3"  type="audio/mpeg">
+    </audio>
+
+    <div id="popupSom">
+        <h2>Ativar Som Ambiente</h2>
+        <p>Para uma melhor experiência, ative o som ambiente do site:</p>
+        <button id="ativarSom">Ativar Som</button>
+    </div>
+    
+    
+    <div class="countdown-container">
+        <div class="countdown">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <span class="countdown-label">Dias</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="where" >
+        <p>
+           <a class="link" href="https://www.youtube.com/@lszin6587">  Encontre a Wave!  </a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="audiocontrol.js"></script>
+</body>
+</html>

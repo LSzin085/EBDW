@@ -1,0 +1,168 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+@font-face {
+  font-family: 'Digital-7';
+  src: url("./fonts/digital-7.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'AURORA';
+  src: url("./fonts/AURORA.otf") format('truetype');
+}
+
+
+body {
+    background-image: url("./img/capa-pc.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url("./img/capa-mobile.png");
+    }
+}
+
+.content {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.countdown-container {
+    margin-top: 35rem;
+    padding: 1rem;
+    display: inline-block;
+    font-family: 'Digital-7', monospace;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    font-family: 'Digital-7', sans-serif;
+    font-size: 9rem;
+    color: #020003; 
+    text-shadow: 0 0 5px rgb(251, 134, 255); 
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.countdown-item span:first-child {
+    font-size: 7rem;
+    font-weight: bold;
+}
+
+
+.countdown-label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.where {
+        text-align: center;
+        margin: 20px;
+}
+    
+.link {
+    color: #000000; 
+    outline: white;       
+    font-weight: bold;
+    font-family: "AURORA";        
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+    animation: brilhar 2s infinite alternate;
+}
+
+@keyframes brilhar {
+    0% {
+        opacity: 0.6;
+        text-shadow: 0 0 5px #ec8eff,
+                    0 0 10px rgba(236, 142, 255, 0.5);
+    }
+    70% {
+        opacity: 1;
+        text-shadow: 0 0 15px #ec8eff,
+                        0 0 30px rgba(236, 142, 255, 0.8),
+                        0 0 45px rgba(236, 142, 255, 0.6);
+    }
+    100% {
+        opacity: 0.8;
+        text-shadow: 0 0 10px #ec8eff,
+                        0 0 20px rgba(236, 142, 255, 0.7);
+    }
+}
+    
+.link:hover {
+    color: #81009b;
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+#popupSom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#popupSom button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #ec8eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+#popupSom button:hover {
+    background: #d46bff;
+    transform: scale(1.05);
+}
+
+#popupSom.hidden {
+    display: none;
+}
